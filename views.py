@@ -30,7 +30,7 @@ def send_email(request):
     email = request.POST["email"]
     message = request.POST["message"]
     send_simple_message(name, email, message)
-
+    #Send responce to the emailed user
     custom_message = "Hi" + name + "thanks for reaching out to me, I will get back to you soon."
     send_response(name,email, custom_message)
     
@@ -44,7 +44,7 @@ def send_simple_message(name, email, message):
         auth=("api", "1e92efcdeed183daba323fb246ecbd4c-acb0b40c-3dd21064"),
         data={"from": email,
               "to": "syedhussainqa@gmail.com",
-              "subject": "Hello" + name,
+              "subject": "Hello " + name,
               "text": message}
               )
 
@@ -54,7 +54,7 @@ def send_response(email, name, message):
         auth=("api", "1e92efcdeed183daba323fb246ecbd4c-acb0b40c-3dd21064"),
         data={"from": "syedhussainqa@gmail.com",
               "to": email,
-              "subject": "Hello" + name,
+              "subject": "Hello " + name,
               "text": message}
               )
 
