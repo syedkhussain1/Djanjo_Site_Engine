@@ -32,7 +32,7 @@ def send_email(request):
     send_simple_message(name, email, message)
     
     # Do something with these three variables...
-    return redirect("/")
+    return redirect("")
     # Return a redirect!
 
 def send_simple_message(name, email, message):
