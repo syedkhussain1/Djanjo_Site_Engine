@@ -1,5 +1,5 @@
 import requests
-import redirect
+#import redirect
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -32,7 +32,7 @@ def send_email(request):
     send_simple_message(name, email, message)
     
     # Do something with these three variables...
-    return redirect("/send-email")
+    #return redirect("/send-email")
     # Return a redirect!
 
 def send_simple_message(name, email, message):
