@@ -30,13 +30,15 @@ def send_email(request):
     email = request.POST["email"]
     message = request.POST["message"]
     send_simple_message(name, email, message)
+
+    custom_message = "Hi" + name + "thanks for reaching out to me, I will get back to you soon."
+    send_response(name,email, custom_message)
     
     # Do something with these three variables...
     return redirect("/")
     # Return a redirect!
 
 def send_simple_message(name, email, message):
-    print("print start")
     requests.post(
         "https://api.mailgun.net/v3/sandbox5384f59555ca4eae8a3c0af12e96c56a.mailgun.org/messages",
         auth=("api", "1e92efcdeed183daba323fb246ecbd4c-acb0b40c-3dd21064"),
@@ -45,6 +47,17 @@ def send_simple_message(name, email, message):
               "subject": "Hello" + name,
               "text": message}
               )
+
+def send_response(email, name, message):
+    requests.post(
+        "https://api.mailgun.net/v3/sandbox5384f59555ca4eae8a3c0af12e96c56a.mailgun.org/messages",
+        auth=("api", "1e92efcdeed183daba323fb246ecbd4c-acb0b40c-3dd21064"),
+        data={"from": "syedhussainqa@gmail.com",
+              "to": email,
+              "subject": "Hello" + name,
+              "text": message}
+              )
+
 
 # def github_api_example(request):
 #     # We can also combine Django with APIs
