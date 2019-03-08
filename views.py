@@ -54,7 +54,7 @@ def send_response(email, name, message):
         auth=("api", "1e92efcdeed183daba323fb246ecbd4c-acb0b40c-3dd21064"),
         data={"from": "syedhussainqa@gmail.com",
               "to": email,
-              "subject": "Hello " + name,
+              "subject": "This is " + name,
               "text": message}
               )
 
