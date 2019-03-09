@@ -93,13 +93,16 @@
     <div class="container">
         <div class="row">
             <h3>Other Works</h3>
-            <ul>
+            {% for repo in github_repos %}
+                <li>{{ repo.name }}</li>
+            {% endfor %}
+            <!-- <ul>
                 <li>Weather Android Application- <a href="https://github.com/syedhussainqa/ZeenMoi-Android-App"><strong>Clima</strong></a></li>
                 <li>Android chat Application- <a href="https://github.com/syedhussainqa/ZeenMoi-Android-App"><strong>AChat</strong></a></li>
                 <li>RestAssured Autmation with Java- <a href="https://github.com/syedhussainqa/ZeenMoi-Android-App"><strong>RestAssured Framework</strong></a></li>
                 <li>Selenium Automation with Java- <a href="https://github.com/syedhussainqa/ZeenMoi-Android-App"><strong>Selinium Framework</strong></a></li>
 
-            </ul>
+            </ul> -->
         </div>
     </div>
 </section>

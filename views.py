@@ -68,12 +68,12 @@ def send_response(email, name, message):
               )
 
 
-# def github_api_example(request):
-#     # We can also combine Django with APIs
-#     response = requests.get('https://api.github.com/users/michaelpb/repos')
-#     repos = response.json()
-#     context = {
-#         'github_repos': repos,
-#     }
-#     return render(request, 'github.html', context)
+def github_api(request):
+    # We can also combine Django with APIs
+    response = requests.get('https://api.github.com/users/syedhussainqa/repos')
+    repos = response.json()
+    git_context = {
+        'github_repos': repos,
+    }
+    return render(request, 'project.html', git_context)
 
