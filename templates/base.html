@@ -17,11 +17,15 @@
 <body>
     <div class="header">
         <div class="pill-nav">
-            <a href="index.html#follow-me">Contact</a>
+            <a href="index#follow-me">Contact</a>
             <a href="my-blog">Travel Blog</a>
             <a href="my-projects">My Work</a>
 	    <h3 class="name">SYED HUSSAIN</h3>
+	<div class=content>
+		{% block content %}
+		{% endblock content %}
 
-	    {{content|safe}}
+	</div>
+	    <!-- {{content|safe}} -->
   </body>
 </html>
