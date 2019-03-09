@@ -24,12 +24,12 @@ def my_blog(request):
     }
     return render(request, "base.html", context)
 
-# def index(request):
-#     # index_html = open("content/index.html").read()
-#     context = {
-#         # "content": index_html
-#     }
-#     return render(request, "index.html", context)
+def index(request):
+    # index_html = open("content/index.html").read()
+    context = {
+        # "content": index_html
+    }
+    return render(request, "index.html", context)
 
 
 
