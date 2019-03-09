@@ -3,12 +3,12 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect
 
-# def index(request):
-#     index_html = open("content/index.html").read()
-#     context = {
-#         "content": index_html
-#     }
-#     return render(request, "base.html", context)
+def index(request):
+    index_html = open("content/index.html").read()
+    context = {
+        "content": index_html
+    }
+    return render(request, "base.html", context)
 
 def my_projects(request):
     project_html = open("content/project.html").read()
@@ -24,12 +24,12 @@ def my_blog(request):
     }
     return render(request, "base.html", context)
 
-def index(request):
-    # index_html = open("content/index.html").read()
-    context = {
-        # "content": index_html
-    }
-    return render(request, "index.html", context)
+# def index(request):
+#     # index_html = open("content/index.html").read()
+#     context = {
+#         # "content": index_html
+#     }
+#     return render(request, "index.html", context)
 
 
 
