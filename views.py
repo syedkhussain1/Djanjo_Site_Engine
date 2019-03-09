@@ -3,26 +3,35 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect
 
+# def index(request):
+#     index_html = open("content/index.html").read()
+#     context = {
+#         "content": index_html
+#     }
+#     return render(request, "base.html", context)
+
+# def my_projects(request):
+#     project_html = open("content/project.html").read()
+#     context = {
+#         "content": project_html
+#     }
+#     return render(request, "base.html", context)
+
+# def my_blog(request):
+#     blog_html = open("content/blog.html").read()
+#     context = {
+#         "content": blog_html
+#     }
+#     return render(request, "base.html", context)
+
 def index(request):
-    index_html = open("content/index.html").read()
+    # index_html = open("content/index.html").read()
     context = {
-        "content": index_html
+        # "content": index_html
     }
-    return render(request, "base.html", context)
+    return render(request, "index.html", context)
 
-def my_projects(request):
-    project_html = open("content/project.html").read()
-    context = {
-        "content": project_html
-    }
-    return render(request, "base.html", context)
 
-def my_blog(request):
-    blog_html = open("content/blog.html").read()
-    context = {
-        "content": blog_html
-    }
-    return render(request, "base.html", context)
 
 
 def send_email(request):
