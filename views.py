@@ -10,19 +10,19 @@ from django.shortcuts import redirect
 #     }
 #     return render(request, "base.html", context)
 
-# def my_projects(request):
-#     project_html = open("content/project.html").read()
-#     context = {
-#         "content": project_html
-#     }
-#     return render(request, "base.html", context)
+def my_projects(request):
+    project_html = open("content/project.html").read()
+    context = {
+        "content": project_html
+    }
+    return render(request, "base.html", context)
 
-# def my_blog(request):
-#     blog_html = open("content/blog.html").read()
-#     context = {
-#         "content": blog_html
-#     }
-#     return render(request, "base.html", context)
+def my_blog(request):
+    blog_html = open("content/blog.html").read()
+    context = {
+        "content": blog_html
+    }
+    return render(request, "base.html", context)
 
 def index(request):
     # index_html = open("content/index.html").read()
