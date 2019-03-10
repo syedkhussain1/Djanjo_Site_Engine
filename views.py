@@ -31,6 +31,20 @@ def index(request):
     }
     return render(request, "index.html", context)
 
+def my_projects(request):
+    # index_html = open("content/index.html").read()
+    context = {
+        # "content": index_html
+    }
+    return render(request, "project.html", context)
+
+def my_blog(request):
+    # index_html = open("content/index.html").read()
+    context = {
+        # "content": index_html
+    }
+    return render(request, "blog.html", context)
+
 
 
 
@@ -41,7 +55,7 @@ def send_email(request):
     send_simple_message(name, email, message)
     #Send responce to the emailed user
     custom_message = "Hi" + name + "thanks for reaching out to me, I will get back to you soon."
-    send_response(name,email, custom_message)
+    send_response(name, email, custom_message)
     
     # Do something with these three variables...
     return redirect("/")
